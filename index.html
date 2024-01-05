@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido De Encontro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="painel">
+    <h1> Tenho uma pergunta para você, julya ❤️ </h1>
+    <img src="https://img.wattpad.com/3ac0a21bfd7b1022192af1f241c0d822c62e24d9/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f5a5a5a4d4c5f706f36555f484b673d3d2d3938313439343337332e313634373763343965656230306463373737313539383539383636392e676966" alt="">
+    <h2> Bora sair ?</h2>
+    <link rel="stylesheet" href="julya.css">
+
+    <a href="https://www.tiktok.com/@letras.es/video/7071263675096632582?q=to%20querendo%20vc%20so%20pra%20mim&t=1704486331614"><button id="Sim">Sim</button></a>
+    <button onmouseover="fuja()" id="Nao">Não</button>
+</div>
+
+<script>
+    function fuja() {
+        var botaoNao = document.getElementById("Nao");
+        var painel = document.querySelector(".painel");
+        
+        var maxX = painel.clientWidth - botaoNao.offsetWidth - 20; // Ajustando para evitar bordas próximas
+        var maxY = painel.clientHeight - botaoNao.offsetHeight - 20; // Ajustando para evitar bordas próximas
+
+        var aleatorioX = Math.floor(Math.random() * maxX);
+        var aleatorioY = Math.floor(Math.random() * maxY);
+
+        botaoNao.style.left = aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px";
+    }
+</script>
+
+</body>
+</html>
